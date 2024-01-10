@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  <link rel="stylesheet" href="LeafFiles/leaflet.css"/>
+  <script src="LeafFiles/leaflet.js"></script>
+        <title>La Liga</title>
+        <style>
+            #mapid {
+      height: calc(100vh - 80px);
+      width: 100%;}
+          .top-left-image {
+        float: left;
+        top: 0;
+        left: 0;
+        width: 100px; 
+        height: auto; 
+        margin-left: 20px;
+
+      }
+      .container {
+        position: relative;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin-top: 50px;
+        width: 70%;
+        align-self:center
+
+      }
+      </style>
+          </head>
+          <body style="background-color: black;color: white;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                      <img src="web fotos/545_realmadridfc.jpg" alt="" width="40" height="50">
+                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="overzicht.html">overzicht</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="contact.html">contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Topicpages</a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="topic1.html">galacticos</a></li>
+                        <li><a class="dropdown-item" href="topic2.html">managers</a></li>
+                        <li><a class="dropdown-item" href="topic3.html">ronaldo</a></li>
+                        <li><a class="dropdown-item" href="topic4.html">trofeeen</a></li>
+                        <li><a class="dropdown-item" href="topic5.html">el classico</a></li>
+                        <li><a class="dropdown-item" href="topic6.html">la liga</a></li>
+
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+           </nav>
+           <header class="fs-1 text-center">La liga</header>
+     <div class="container">
+      <img src="web fotos/la liga.png">
+<p>       La Liga, officieel bekend als de Primera División, is de hoogste professionele voetbalcompetitie in Spanje. Het is een van de sterkste voetbalcompetities ter wereld en wordt beschouwd als een van de meest competitieve competities in Europa. La Liga bestaat uit 20 teams die strijden om de titel van landskampioen.
+          De competitie werd opgericht in 1929, en sindsdien heeft het een rijke geschiedenis en traditie opgebouwd. Clubs zoals Real Madrid en FC Barcelona hebben de competitie gedomineerd, met beide teams die regelmatig met elkaar strijden om de titel, wat resulteert in de legendarische El Clásico-wedstrijden.
+          Wat La Liga onderscheidt, is het technische en tactische aspect van het spel. Spaans voetbal staat bekend om zijn nadruk op balbezit, snelle combinatiespel en technische vaardigheden. Veel van 's werelds beste spelers, waaronder Lionel Messi, Cristiano Ronaldo, Xavi, en Andrés Iniesta, hebben in La Liga gespeeld en hebben bijgedragen aan de internationale reputatie van de competitie.
+La Liga is niet alleen geliefd vanwege het voetbal op het veld, maar ook vanwege zijn rijke cultuur, passievolle fans en historische stadions. Het biedt voetballiefhebbers over de hele wereld een schouwspel van technische excellentie en intense rivaliteit, waardoor het een van de meest opwindende voetbalcompetities is om te volgen.
+      </p>
+     </div>
+     <div class="container"><div id="mapid"></div></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var map = L.map('mapid').setView([40.4637, -3.7492], 6);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var customIcon = L.icon({
+            iconUrl: 'leaflet/marker-icon.png',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+            popupAnchor: [0, -40]
+        });
+
+        var marker = L.marker([40.4637, -3.7492], { icon: customIcon }).addTo(map);
+    });
+</script>
+
+
+     
+
+
+    </body>
+</html>

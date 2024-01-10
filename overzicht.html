@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>overzicht</title>
+        <style>
+          body {
+              background-color: black; 
+              color: #333;
+              margin: 0;
+              padding: 0;
+          }
+  
+          .navbar {
+              background-color:black;
+          }
+  
+          .navbar-brand img {
+              width: 40px;
+              height: auto;
+              margin-right: 10px;
+          }
+  
+          .navbar-toggler-icon {
+              background-color: black;
+          }
+  
+          .navbar-nav .nav-link {
+              color: black;
+          }
+  
+          .navbar-nav .nav-link:hover {
+              color: black;
+          }
+  
+          .container {
+              margin-top: 50px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-around;
+          }
+  
+          .column {
+              width: 30%;
+              margin: 15px;
+              padding: 20px;
+              text-align: center;
+              background-color:white; 
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+              transition: transform 0.3s ease-in-out;
+              outline-color: gold;
+              outline-style: groove;
+              outline-width: 5px;
+          }
+  
+          .column:hover {
+              transform: scale(1.05);
+          }
+  
+          .column img {
+              width: 100%;
+              height: auto;
+              border-radius: 6px; 
+              margin-bottom: 15px;
+          }
+      </style>
+        
+        
+
+    </head>
+    <body >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="web fotos/545_realmadridfc.jpg" alt="" width="40" height="50">
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="overzicht.html">overzicht</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contact.html">contact</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Topicpages
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="topic1.html">galacticos</a></li>
+                      <li><a class="dropdown-item" href="topic2.html">managers</a></li>
+                      <li><a class="dropdown-item" href="topic3.html">ronaldo</a></li>
+                      <li><a class="dropdown-item" href="topic4.html">trofeeen</a></li>
+                      <li><a class="dropdown-item" href="topic5.html">el classico</a></li>
+                      <li><a class="dropdown-item" href="topic6.html">la liga</a></li>
+
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+         </nav>
+         <div class="container pica" >
+          <div class="column">
+            <img src="web fotos/galacticos.jpg" alt="Foto 1">
+            <h2><a href="topic1.html">Galacticos</a></h2>
+            <p>klik hier voor meer info over de galacticos</p>
+          </div>
+          <div class="column">
+            <img src="web fotos/managers.jpg" alt="Foto 2">
+            <h2><a href="topic2.html">Managers</a></h2>
+            <p>klik hier voor meer info over de managers van real madrid</p>
+          </div>
+          <div class="column">
+            <img src="web fotos/ronaldo.jpg" alt="Foto 3">
+            <h2><a href="topic3.html">Ronaldo</a></h2>
+            <p>klik hier voor meer info over cristiano ronaldo</p>
+          </div>
+          <div class="column">
+            <img src="web fotos/trofeeen.jpg" alt="Foto 4">
+            <h2><a href="topic4.html">Trofeeen</a></h2>
+            <p>klik hier voor meer info over de trofeeen van real madrid</p>
+          </div>
+          <div class="column">
+            <img src="web fotos/el classico.jpg" alt="Foto 5">
+            <h2><a href="topic5.html">El classico</a></h2>
+            <p>klik hier voor meer info over de el classico tussen real en barca</p>
+          </div>
+          <div class="column">
+            <img src="web fotos/la liga.png" alt="Foto 6">
+            <h2><a href="topic6.html">La liga</a></h2>
+            <p>klik hier voor meer info over de la liga</p>
+          </div>
+        </div>
+          
+        
+        
+    
+        
+       
+
+    </body>
+</html>
